@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for item in item %}
+
+<div class="card " style="width: 18rem; margin: 1cm 0 0 2cm;">
+    <img src="{{item.img.url}}" class="card-img-top" alt="not found">
+    <div class="card-body" >
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="/editproduct/delete/{{item.id}}/" class="btn btn-primary">Delete an Item</a>
+      <hr>
+      <a href="/editproduct/updates/{{item.id}}/" class="btn btn-primary">Update an Item</a>
+      <a href="/editproduct/details/{{item.id}}/" class="btn btn-primary">Details</a>      
+    </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete items</title>
+</head>
+<body bgcolor='#f097e1'>   
+        <center> 
+        <h1 style="height:0cm;"> List of available Items</h1><br>
+        <h2> Click the items to be deleted/Updated</h2></center> <br>
+            <div>
+                {% for i in messages %}
+                <h3>{{i}}</h3>
+                {% endfor %}               
+            <div>
+        {% for item in item %}
+        <div><br>
+        <img src="{{item.img.url}}" style="height:200px;width:200px;margin-left:4cm"/><br>
+        <a href="/editproduct/dell/{{item.id}}"><button type="button" >Delete</button></a><br><br>
+        <a href="/editproduct/update/{{item.id}}"><button  type="button" >Update</button></a>
+        <a href="/editproduct/details/{{item.id}}"><button  type="button" >Details</button></a>
+        </div>
+        {% endfor %}                 
+
+        </div>
+        </body>
+</html> -->
