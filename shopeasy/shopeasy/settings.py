@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts',
     'item',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -76,14 +77,21 @@ WSGI_APPLICATION = 'shopeasy.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'shopeasy',
-        'USER':'postgres',
-        'PASSWORD':'1234',
-        'HOST':'localhost',
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME':'shopeasy',
+#         'USER':'postgres',
+#         'PASSWORD':'1234',
+#         'HOST':'localhost',
+
+#     }
+# }
 
 
 # Password validation
